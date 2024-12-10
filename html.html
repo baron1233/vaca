@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมง้อแฟน</title>
+</head>
+<body>
+
+    <h1>เกมง้อแฟน</h1>
+    <p>ถ้าฉันขอโทษ, คุณอยากได้คำขอโทษจากฉันแบบไหน?</p>
+    
+    <form method="GET" action="">
+        <input type="radio" id="choice1" name="answer" value="ขอโทษด้วยคำพูดหวานๆ">
+        <label for="choice1">1. ขอโทษด้วยคำพูดหวานๆ</label><br><br>
+
+        <input type="radio" id="choice2" name="answer" value="ขอโทษด้วยการกระทำ">
+        <label for="choice2">2. ขอโทษด้วยการกระทำ</label><br><br>
+
+        <input type="submit" value="เลือกคำขอโทษ">
+    </form>
+
+    <!-- ส่วนแสดงผลหลังการเลือก -->
+    <p>คุณเลือกคำขอโทษแบบ: 
+        <!-- การแสดงผลจะทำผ่านการรีเฟรชหน้า -->
+        <?php
+            if(isset($_GET['answer'])){
+                echo $_GET['answer'];
+            }
+        ?>
+    </p>
+
+</body>
+</html>
